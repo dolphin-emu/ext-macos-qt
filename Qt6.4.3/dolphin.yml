@@ -1,0 +1,94 @@
+release: 6.4.3
+platform: macx-clang
+name: dolphin.mac.universal
+
+compiler:
+    name: clang
+
+configure:
+    additional_parameters: -no-opengl
+    nomake:
+        - examples
+        - tests
+        - tools
+    skip:
+        - qt3d
+        - qt5compat
+        - qtactiveqt
+        - qtandroidextras
+        - qtcharts
+        - qtcoap
+        - qtconnectivity
+        - qtdatavis3d
+        - qtdeclarative
+        - qtdoc
+        - qtgamepad
+        - qtgraphicaleffects
+        - qthttpserver
+        - qtjsonrpc
+        - qtlanguageserver
+        - qtlocation
+        - qtlottie
+        - qtmqtt
+        - qtmultimedia
+        - qtnetworkauth
+        - qtopcua
+        - qtpositioning
+        - qtprotobuf
+        - qtpurchasing
+        - qtquick3d
+        - qtquick3dphysics
+        - qtquickcontrols
+        - qtquickeffectmaker
+        - qtquicktimeline
+        - qtremoteobjects
+        - qtscript
+        - qtscxml
+        - qtsensors
+        - qtserialbus
+        - qtserialport
+        - qtshadertools
+        - qtspeech
+        - qtsvg
+        - qttools
+        - qttranslations 
+        - qtvirtualkeyboard
+        - qtwayland
+        - qtwebchannel
+        - qtwebengine
+        - qtwebsockets
+        - qtwebview
+        - qtx11extras
+        - qtxml
+        - qtxmlpatterns
+    feature:
+        concurrent: false
+        dbus: false
+        imageformat_bmp: false
+        network: false
+        printsupport: false
+        qmake: false
+        sql: false
+        testlib: false
+        textmarkdownreader: false
+        textmarkdownwriter: false
+        textodfwriter: false
+        tiff: false
+        webp: false
+        xml: false
+
+postprocess:
+    delete:
+        - doc
+        - include/QtXml
+        - lib/cmake/Qt6Xml
+        - modules/Xml.json
+    delete_regex:
+        - bin\\android.*
+        - bin\\Qt6Xml.*
+        - bin\\.*\.cmake
+        - bin\\.*\.conf
+        - bin\\.*\.pl
+        - lib\\metatypes\\qt6xml_.*\.json
+        - lib\\Qt6Xml.*
+        - .*\.prl

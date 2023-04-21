@@ -1,0 +1,11 @@
+{
+    "module_name": "JpegPrivate",
+    "version": "6.4.3",
+    "built_with": {
+        "compiler_id": "AppleClang",
+        "compiler_target": "",
+        "compiler_version": "14.0.0.14000029",
+        "cross_compiled": false,
+        "target_system": "Darwin"
+    }
+}
