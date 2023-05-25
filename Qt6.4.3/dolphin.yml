@@ -24,6 +24,7 @@ configure:
         - qtdoc
         - qtgamepad
         - qtgraphicaleffects
+        - qtgrpc
         - qthttpserver
         - qtjsonrpc
         - qtlanguageserver
@@ -49,7 +50,6 @@ configure:
         - qtserialport
         - qtshadertools
         - qtspeech
-        - qtsvg
         - qttools
         - qttranslations 
         - qtvirtualkeyboard
